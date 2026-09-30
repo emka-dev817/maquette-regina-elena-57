@@ -21,6 +21,16 @@ a{text-decoration:none}
 .card-pool{ background-image: linear-gradient(180deg, rgba(20,16,12,0) 45%, rgba(20,16,12,.82) 100%), url(img/hero.jpg); background-size: cover; background-position: center; }
 .card-dining{ background-image: linear-gradient(180deg, rgba(20,16,12,0) 45%, rgba(20,16,12,.82) 100%), url(img/dining2.jpg); background-size: cover; background-position: center; }
 .feature-img{ background-image: url(img/spa2.jpg); background-size: cover; background-position: center; }
+@media (max-width: 680px) {
+  .nav-bar{ padding: 0 16px !important; }
+  .nav-logo-text{ font-size: 14px !important; letter-spacing: 1.5px !important; }
+  .nav-logo-badge{ width: 28px !important; height: 28px !important; }
+  .reserve-btn{ padding: 8px 14px !important; font-size: 9.5px !important; letter-spacing: 0.8px !important; }
+  .hero-title{ font-size: 34px !important; }
+  .booking-widget{ flex-wrap: wrap !important; gap: 14px 10px !important; padding: 18px !important; }
+  .booking-field{ flex: 1 1 40% !important; border-right: none !important; padding: 0 !important; min-width: 120px; }
+  .booking-cta{ margin-left: 0 !important; width: 100%; text-align: center; }
+}
 </style>
 </head>
 <body>
@@ -30,23 +40,23 @@ a{text-decoration:none}
   <!-- HERO + NAV -->
   <div class="hero-bg" style="width: 100%; height: 780px; flex-shrink: 0; display: flex; flex-direction: column; position: relative;">
 
-    <div style="height: 96px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 44px;">
-      <button aria-label="Menu" style="background: none; border: none; display: flex; flex-direction: column; gap: 5px; padding: 8px; cursor: pointer;">
+    <div class="nav-bar" style="height: 96px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 44px;">
+      <button aria-label="Menu" style="background: none; border: none; display: flex; flex-direction: column; gap: 5px; padding: 8px; cursor: pointer; flex-shrink: 0;">
         <div style="width: 22px; height: 1.5px; background: #FFFFFF;"></div>
         <div style="width: 22px; height: 1.5px; background: #FFFFFF;"></div>
       </button>
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <div style="width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(255,255,255,.55); display: flex; align-items: center; justify-content: center;">
+      <div style="display: flex; align-items: center; gap: 12px; min-width: 0;">
+        <div class="nav-logo-badge" style="width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(255,255,255,.55); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
           <span style="font-family: 'Fraunces', serif; font-size: 14px; color: #FFFFFF;">57</span>
         </div>
-        <span style="font-family: 'Fraunces', serif; font-size: 19px; letter-spacing: 3px; color: #FFFFFF;">REGINA&nbsp;ELENA</span>
+        <span class="nav-logo-text" style="font-family: 'Fraunces', serif; font-size: 19px; letter-spacing: 3px; color: #FFFFFF; white-space: nowrap;">REGINA&nbsp;ELENA</span>
       </div>
-      <a href="#" style="background: #B08D57; color: #1C1A17; padding: 11px 24px; border-radius: 999px; font-size: 11.5px; font-weight: 600; letter-spacing: 1.5px;">RÉSERVER</a>
+      <a href="#" class="reserve-btn" style="background: #B08D57; color: #1C1A17; padding: 11px 24px; border-radius: 999px; font-size: 11.5px; font-weight: 600; letter-spacing: 1.5px; white-space: nowrap; flex-shrink: 0;">RÉSERVER</a>
     </div>
 
     <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 40px; gap: 22px;">
       <div style="font-size: 12px; letter-spacing: 4px; color: #E4C99B; font-weight: 600;">MARINA CENTRO · RIMINI</div>
-      <div style="font-family: 'Fraunces', serif; font-style: italic; font-weight: 500; font-size: 60px; line-height: 1.12; color: #FFFFFF; max-width: 880px;">Où la mer rencontre<br>la quiétude.</div>
+      <div class="hero-title" style="font-family: 'Fraunces', serif; font-style: italic; font-weight: 500; font-size: 60px; line-height: 1.12; color: #FFFFFF; max-width: 880px;">Où la mer rencontre<br>la quiétude.</div>
       <div style="font-size: 15px; color: rgba(255,255,255,.82); max-width: 480px; line-height: 1.6;">Un hôtel avec spa à deux pas de la plage, pensé pour qui recherche une élégance discrète et du temps pour soi.</div>
       <div style="display: flex; gap: 14px; margin-top: 8px;">
         <a href="#" style="border: 1px solid rgba(255,255,255,.65); color: #FFFFFF; padding: 13px 26px; border-radius: 999px; font-size: 12px; letter-spacing: 1.5px; font-weight: 500;">DÉCOUVRIR LES CHAMBRES</a>
@@ -54,20 +64,20 @@ a{text-decoration:none}
     </div>
 
     <div style="flex-shrink: 0; display: flex; justify-content: center; padding-bottom: 36px;">
-      <div style="background: #FFFFFF; border-radius: 16px; box-shadow: 0 24px 60px rgba(20,16,12,.28); padding: 22px 26px; display: flex; align-items: center; gap: 0; width: 900px; max-width: 90%;">
-        <div style="flex: 1; padding: 0 20px; border-right: 1px solid #ECE4D6;">
+      <div class="booking-widget" style="background: #FFFFFF; border-radius: 16px; box-shadow: 0 24px 60px rgba(20,16,12,.28); padding: 22px 26px; display: flex; align-items: center; gap: 0; width: 900px; max-width: 90%;">
+        <div class="booking-field" style="flex: 1; padding: 0 20px; border-right: 1px solid #ECE4D6;">
           <div style="font-size: 10.5px; letter-spacing: 1.2px; color: #9C9184; font-weight: 600; margin-bottom: 6px;">ARRIVÉE</div>
           <div style="font-family: 'Fraunces', serif; font-size: 18px; color: #1C1A17;">07 oct. 2026</div>
         </div>
-        <div style="flex: 1; padding: 0 20px; border-right: 1px solid #ECE4D6;">
+        <div class="booking-field" style="flex: 1; padding: 0 20px; border-right: 1px solid #ECE4D6;">
           <div style="font-size: 10.5px; letter-spacing: 1.2px; color: #9C9184; font-weight: 600; margin-bottom: 6px;">DÉPART</div>
           <div style="font-family: 'Fraunces', serif; font-size: 18px; color: #1C1A17;">11 oct. 2026</div>
         </div>
-        <div style="flex: 1; padding: 0 20px; border-right: 1px solid #ECE4D6;">
+        <div class="booking-field" style="flex: 1; padding: 0 20px; border-right: 1px solid #ECE4D6;">
           <div style="font-size: 10.5px; letter-spacing: 1.2px; color: #9C9184; font-weight: 600; margin-bottom: 6px;">VOYAGEURS</div>
           <div style="font-family: 'Fraunces', serif; font-size: 18px; color: #1C1A17;">2 adultes</div>
         </div>
-        <a href="#" style="margin-left: 24px; background: #1C1A17; color: #FFFFFF; padding: 15px 28px; border-radius: 10px; font-size: 12px; letter-spacing: 1px; font-weight: 600; white-space: nowrap;">VÉRIFIER LA DISPONIBILITÉ</a>
+        <a href="#" class="booking-cta" style="margin-left: 24px; background: #1C1A17; color: #FFFFFF; padding: 15px 28px; border-radius: 10px; font-size: 12px; letter-spacing: 1px; font-weight: 600; white-space: nowrap;">VÉRIFIER LA DISPONIBILITÉ</a>
       </div>
     </div>
   </div>
